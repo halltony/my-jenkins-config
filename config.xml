@@ -1,97 +1,31 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <hudson>
   <disabledAdministrativeMonitors/>
-  <version>2.89.4</version>
-  <installState class="jenkins.install.InstallState$5">
-    <isSetupComplete>true</isSetupComplete>
-    <name>RESTART</name>
-  </installState>
+  <version>2.89.2</version>
   <numExecutors>5</numExecutors>
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
   <authorizationStrategy class="hudson.security.GlobalMatrixAuthorizationStrategy">
-    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create:admin</permission>
-    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create:developer-admin</permission>
-    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete:admin</permission>
-    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete:developer-admin</permission>
-    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains:admin</permission>
-    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains:developer-admin</permission>
-    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:admin</permission>
-    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:developer-admin</permission>
-    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.UseItem:admin</permission>
-    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.UseOwn:admin</permission>
-    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View:admin</permission>
-    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View:developer-admin</permission>
-    <permission>hudson.model.Computer.Build:admin</permission>
     <permission>hudson.model.Computer.Configure:admin</permission>
-    <permission>hudson.model.Computer.Configure:developer-admin</permission>
-    <permission>hudson.model.Computer.Connect:admin</permission>
-    <permission>hudson.model.Computer.Create:admin</permission>
     <permission>hudson.model.Computer.Delete:admin</permission>
-    <permission>hudson.model.Computer.Delete:developer-admin</permission>
-    <permission>hudson.model.Computer.Disconnect:admin</permission>
-    <permission>hudson.model.Computer.ExtendedRead:admin</permission>
     <permission>hudson.model.Hudson.Administer:admin</permission>
-    <permission>hudson.model.Hudson.Administer:developer-admin</permission>
-    <permission>hudson.model.Hudson.ConfigureUpdateCenter:admin</permission>
     <permission>hudson.model.Hudson.Read:admin</permission>
-    <permission>hudson.model.Hudson.Read:developer-admin</permission>
-    <permission>hudson.model.Hudson.RunScripts:admin</permission>
-    <permission>hudson.model.Hudson.RunScripts:developer-admin</permission>
-    <permission>hudson.model.Hudson.UploadPlugins:admin</permission>
     <permission>hudson.model.Item.Build:admin</permission>
-    <permission>hudson.model.Item.Build:developer-admin</permission>
-    <permission>hudson.model.Item.Cancel:admin</permission>
     <permission>hudson.model.Item.Configure:admin</permission>
-    <permission>hudson.model.Item.Configure:developer-admin</permission>
     <permission>hudson.model.Item.Create:admin</permission>
-    <permission>hudson.model.Item.Create:developer-admin</permission>
     <permission>hudson.model.Item.Delete:admin</permission>
-    <permission>hudson.model.Item.Delete:developer-admin</permission>
-    <permission>hudson.model.Item.Discover:admin</permission>
-    <permission>hudson.model.Item.Discover:developer-admin</permission>
-    <permission>hudson.model.Item.ExtendedRead:admin</permission>
-    <permission>hudson.model.Item.Move:admin</permission>
     <permission>hudson.model.Item.Read:admin</permission>
-    <permission>hudson.model.Item.Read:developer-admin</permission>
     <permission>hudson.model.Item.Workspace:admin</permission>
-    <permission>hudson.model.Item.Workspace:developer-admin</permission>
     <permission>hudson.model.Run.Delete:admin</permission>
-    <permission>hudson.model.Run.Delete:developer-admin</permission>
-    <permission>hudson.model.Run.Replay:admin</permission>
     <permission>hudson.model.Run.Update:admin</permission>
-    <permission>hudson.model.Run.Update:developer-admin</permission>
     <permission>hudson.model.View.Configure:admin</permission>
-    <permission>hudson.model.View.Configure:developer-admin</permission>
     <permission>hudson.model.View.Create:admin</permission>
-    <permission>hudson.model.View.Create:developer-admin</permission>
     <permission>hudson.model.View.Delete:admin</permission>
-    <permission>hudson.model.View.Delete:developer-admin</permission>
-    <permission>hudson.model.View.Read:admin</permission>
     <permission>hudson.scm.SCM.Tag:admin</permission>
-    <permission>hudson.scm.SCM.Tag:developer-admin</permission>
-    <permission>hudson.security.Permission.FullControl:admin</permission>
-    <permission>hudson.security.Permission.GenericConfigure:admin</permission>
-    <permission>hudson.security.Permission.GenericCreate:admin</permission>
-    <permission>hudson.security.Permission.GenericDelete:admin</permission>
-    <permission>hudson.security.Permission.GenericRead:admin</permission>
-    <permission>hudson.security.Permission.GenericUpdate:admin</permission>
-    <permission>hudson.security.Permission.GenericWrite:admin</permission>
   </authorizationStrategy>
-  <securityRealm class="org.openshift.jenkins.plugins.openshiftlogin.OpenShiftOAuth2SecurityRealm" plugin="openshift-login@1.0.6">
-    <defaultedServiceAccountDirectory>/run/secrets/kubernetes.io/serviceaccount</defaultedServiceAccountDirectory>
-    <defaultedServiceAccountName>jenkins</defaultedServiceAccountName>
-    <defaultedServerPrefix>https://openshift.default.svc</defaultedServerPrefix>
-    <defaultedRedirectURL>https://192.168.64.4:8443</defaultedRedirectURL>
-    <defaultedClientId>system:serviceaccount:custom-jenkins-image:jenkins</defaultedClientId>
-    <defaultedClientSecret>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJjdXN0b20tamVua2lucy1pbWFnZSIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VjcmV0Lm5hbWUiOiJqZW5raW5zLXRva2VuLW1uN2Q4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6ImplbmtpbnMiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC51aWQiOiIwYjNkNTc5MS0yYTg2LTExZTgtOWMwMC0xMmNlN2I2MTIwNDUiLCJzdWIiOiJzeXN0ZW06c2VydmljZWFjY291bnQ6Y3VzdG9tLWplbmtpbnMtaW1hZ2U6amVua2lucyJ9.VK0U-3KQdzCnmRVijHw-6q2Mr8dgEnHgjxV0gcym2orU1ZZWT1w_QVagDyAf_sI5vUHMDs91BmRfMw40oG6NnZ7SW1yTztwrEVcgp4thNU2sETHHun_ElV-8IQwrJ_FF5a6lRTbW2-b4ttJElTkFSA3k0upToaZ2OUcQzTarzRm7pZd1r_Ye_6h2WIl6K_XiMkm_-FEyFIYRutxcHNOuJandPVEqPVr5oyuekSRvi8jU44D5ZNPOOgrJ5D6laU3l1ZaBW5PNtJNSIGikMMwlV12uRfcEYdDaq9RUOTY7fF8K1KJhpZtzM4iDMHvjFi2ZiGL1vhqFammK7BdzFJ_cQg</defaultedClientSecret>
-    <namespace>custom-jenkins-image</namespace>
-    <provider>
-      <issuer>https://192.168.64.4:8443</issuer>
-      <authorization__endpoint>https://192.168.64.4:8443/oauth/authorize</authorization__endpoint>
-      <token__endpoint>https://192.168.64.4:8443/oauth/token</token__endpoint>
-    </provider>
-    <filter/>
+  <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
+    <disableSignup>true</disableSignup>
+    <enableCaptcha>false</enableCaptcha>
   </securityRealm>
   <disableRememberMe>false</disableRememberMe>
   <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
@@ -102,28 +36,22 @@
   <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
   <myViewsTabBar class="hudson.views.DefaultMyViewsTabBar"/>
   <clouds>
-    <org.csanchez.jenkins.plugins.kubernetes.KubernetesCloud plugin="kubernetes@1.3.3">
+    <org.csanchez.jenkins.plugins.kubernetes.KubernetesCloud plugin="kubernetes@1.2">
       <name>openshift</name>
-      <defaultsProviderTemplate></defaultsProviderTemplate>
       <templates>
         <org.csanchez.jenkins.plugins.kubernetes.PodTemplate>
           <inheritFrom></inheritFrom>
           <name>maven</name>
-          <namespace></namespace>
           <privileged>false</privileged>
           <alwaysPullImage>false</alwaysPullImage>
           <instanceCap>2147483647</instanceCap>
-          <slaveConnectTimeout>100</slaveConnectTimeout>
+          <slaveConnectTimeout>0</slaveConnectTimeout>
           <idleMinutes>0</idleMinutes>
           <activeDeadlineSeconds>0</activeDeadlineSeconds>
           <label>maven</label>
           <serviceAccount>jenkins</serviceAccount>
           <nodeSelector></nodeSelector>
-          <nodeUsageMode>NORMAL</nodeUsageMode>
           <customWorkspaceVolumeEnabled>false</customWorkspaceVolumeEnabled>
-          <workspaceVolume class="org.csanchez.jenkins.plugins.kubernetes.volumes.workspace.EmptyDirWorkspaceVolume">
-            <memory>false</memory>
-          </workspaceVolume>
           <volumes/>
           <containers>
             <org.csanchez.jenkins.plugins.kubernetes.ContainerTemplate>
@@ -140,15 +68,6 @@
               <resourceLimitCpu></resourceLimitCpu>
               <resourceLimitMemory></resourceLimitMemory>
               <envVars/>
-              <ports/>
-              <livenessProbe>
-                <execArgs></execArgs>
-                <timeoutSeconds>0</timeoutSeconds>
-                <initialDelaySeconds>0</initialDelaySeconds>
-                <failureThreshold>0</failureThreshold>
-                <periodSeconds>0</periodSeconds>
-                <successThreshold>0</successThreshold>
-              </livenessProbe>
             </org.csanchez.jenkins.plugins.kubernetes.ContainerTemplate>
           </containers>
           <envVars/>
@@ -158,21 +77,16 @@
         <org.csanchez.jenkins.plugins.kubernetes.PodTemplate>
           <inheritFrom></inheritFrom>
           <name>nodejs</name>
-          <namespace></namespace>
           <privileged>false</privileged>
           <alwaysPullImage>false</alwaysPullImage>
           <instanceCap>2147483647</instanceCap>
-          <slaveConnectTimeout>100</slaveConnectTimeout>
+          <slaveConnectTimeout>0</slaveConnectTimeout>
           <idleMinutes>0</idleMinutes>
           <activeDeadlineSeconds>0</activeDeadlineSeconds>
           <label>nodejs</label>
           <serviceAccount>jenkins</serviceAccount>
           <nodeSelector></nodeSelector>
-          <nodeUsageMode>NORMAL</nodeUsageMode>
           <customWorkspaceVolumeEnabled>false</customWorkspaceVolumeEnabled>
-          <workspaceVolume class="org.csanchez.jenkins.plugins.kubernetes.volumes.workspace.EmptyDirWorkspaceVolume">
-            <memory>false</memory>
-          </workspaceVolume>
           <volumes/>
           <containers>
             <org.csanchez.jenkins.plugins.kubernetes.ContainerTemplate>
@@ -189,15 +103,6 @@
               <resourceLimitCpu></resourceLimitCpu>
               <resourceLimitMemory></resourceLimitMemory>
               <envVars/>
-              <ports/>
-              <livenessProbe>
-                <execArgs></execArgs>
-                <timeoutSeconds>0</timeoutSeconds>
-                <initialDelaySeconds>0</initialDelaySeconds>
-                <failureThreshold>0</failureThreshold>
-                <periodSeconds>0</periodSeconds>
-                <successThreshold>0</successThreshold>
-              </livenessProbe>
             </org.csanchez.jenkins.plugins.kubernetes.ContainerTemplate>
           </containers>
           <envVars/>
@@ -228,10 +133,17 @@ ACnjrHuTGLenheLASgz+1yT95WOFgf1/wFIa8lD0
       <namespace>custom-jenkins-image</namespace>
       <jenkinsUrl>http://172.30.176.240:80</jenkinsUrl>
       <jenkinsTunnel>172.30.23.3:50000</jenkinsTunnel>
+      <credentialsId>1a12dfa4-7fc5-47a7-aa17-cc56572a41c7</credentialsId>
       <containerCap>10</containerCap>
       <retentionTimeout>5</retentionTimeout>
       <connectTimeout>0</connectTimeout>
       <readTimeout>0</readTimeout>
+      <labels class="com.google.common.collect.ImmutableMap">
+        <entry>
+          <string>jenkins</string>
+          <string>slave</string>
+        </entry>
+      </labels>
       <maxRequestsPerHost>32</maxRequestsPerHost>
     </org.csanchez.jenkins.plugins.kubernetes.KubernetesCloud>
   </clouds>
