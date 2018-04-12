@@ -18,8 +18,6 @@
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains:developer-admin</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:admin</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:developer-admin</permission>
-    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.UseItem:admin</permission>
-    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.UseOwn:admin</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View:admin</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View:developer-admin</permission>
     <permission>hudson.model.Computer.Build:admin</permission>
@@ -30,16 +28,10 @@
     <permission>hudson.model.Computer.Delete:admin</permission>
     <permission>hudson.model.Computer.Delete:developer-admin</permission>
     <permission>hudson.model.Computer.Disconnect:admin</permission>
-    <permission>hudson.model.Computer.ExtendedRead:admin</permission>
-    <permission>hudson.model.Computer.Provision:admin</permission>
     <permission>hudson.model.Hudson.Administer:admin</permission>
     <permission>hudson.model.Hudson.Administer:developer-admin</permission>
-    <permission>hudson.model.Hudson.ConfigureUpdateCenter:admin</permission>
     <permission>hudson.model.Hudson.Read:admin</permission>
     <permission>hudson.model.Hudson.Read:developer-admin</permission>
-    <permission>hudson.model.Hudson.RunScripts:admin</permission>
-    <permission>hudson.model.Hudson.RunScripts:developer-admin</permission>
-    <permission>hudson.model.Hudson.UploadPlugins:admin</permission>
     <permission>hudson.model.Item.Build:admin</permission>
     <permission>hudson.model.Item.Build:developer-admin</permission>
     <permission>hudson.model.Item.Cancel:admin</permission>
@@ -51,7 +43,6 @@
     <permission>hudson.model.Item.Delete:developer-admin</permission>
     <permission>hudson.model.Item.Discover:admin</permission>
     <permission>hudson.model.Item.Discover:developer-admin</permission>
-    <permission>hudson.model.Item.ExtendedRead:admin</permission>
     <permission>hudson.model.Item.Move:admin</permission>
     <permission>hudson.model.Item.Read:admin</permission>
     <permission>hudson.model.Item.Read:developer-admin</permission>
@@ -71,13 +62,6 @@
     <permission>hudson.model.View.Read:admin</permission>
     <permission>hudson.scm.SCM.Tag:admin</permission>
     <permission>hudson.scm.SCM.Tag:developer-admin</permission>
-    <permission>hudson.security.Permission.FullControl:admin</permission>
-    <permission>hudson.security.Permission.GenericConfigure:admin</permission>
-    <permission>hudson.security.Permission.GenericCreate:admin</permission>
-    <permission>hudson.security.Permission.GenericDelete:admin</permission>
-    <permission>hudson.security.Permission.GenericRead:admin</permission>
-    <permission>hudson.security.Permission.GenericUpdate:admin</permission>
-    <permission>hudson.security.Permission.GenericWrite:admin</permission>
   </authorizationStrategy>
   <securityRealm class="org.openshift.jenkins.plugins.openshiftlogin.OpenShiftOAuth2SecurityRealm" plugin="openshift-login@1.0.5">
     <transport class="com.google.api.client.http.javanet.NetHttpTransport">
@@ -88,11 +72,11 @@
             <keys>
               <sun.security.ssl.EphemeralKeyManager_-EphemeralKeyPair>
                 <uses>0</uses>
-                <expirationTime>1523564113317</expirationTime>
+                <expirationTime>1523569593724</expirationTime>
               </sun.security.ssl.EphemeralKeyManager_-EphemeralKeyPair>
               <sun.security.ssl.EphemeralKeyManager_-EphemeralKeyPair>
                 <uses>0</uses>
-                <expirationTime>1523564113317</expirationTime>
+                <expirationTime>1523569593724</expirationTime>
               </sun.security.ssl.EphemeralKeyManager_-EphemeralKeyPair>
             </keys>
           </ephemeralKeyManager>
@@ -458,17 +442,11 @@ S1JPewIDAQAB</encoded>
       </sslSocketFactory>
     </transport>
     <defaultedServiceAccountDirectory>/run/secrets/kubernetes.io/serviceaccount</defaultedServiceAccountDirectory>
-    <defaultedServiceAccountName>jenkins</defaultedServiceAccountName>
+    <serviceAccountName>a.j.hall@blueyonder.co.uk</serviceAccountName>
     <defaultedServerPrefix>https://openshift.default.svc</defaultedServerPrefix>
-    <defaultedRedirectURL>https://192.168.64.4:8443</defaultedRedirectURL>
-    <defaultedClientId>system:serviceaccount:custom-jenkins-image:jenkins</defaultedClientId>
+    <clientSecret>{AQAAABAAAAAQ+HklI3hcoLPelSFgqglgSORtSZrXfwzoIvhIxExCArU=}</clientSecret>
     <defaultedClientSecret>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJjdXN0b20tamVua2lucy1pbWFnZSIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VjcmV0Lm5hbWUiOiJqZW5raW5zLXRva2VuLW1uN2Q4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6ImplbmtpbnMiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC51aWQiOiIwYjNkNTc5MS0yYTg2LTExZTgtOWMwMC0xMmNlN2I2MTIwNDUiLCJzdWIiOiJzeXN0ZW06c2VydmljZWFjY291bnQ6Y3VzdG9tLWplbmtpbnMtaW1hZ2U6amVua2lucyJ9.VK0U-3KQdzCnmRVijHw-6q2Mr8dgEnHgjxV0gcym2orU1ZZWT1w_QVagDyAf_sI5vUHMDs91BmRfMw40oG6NnZ7SW1yTztwrEVcgp4thNU2sETHHun_ElV-8IQwrJ_FF5a6lRTbW2-b4ttJElTkFSA3k0upToaZ2OUcQzTarzRm7pZd1r_Ye_6h2WIl6K_XiMkm_-FEyFIYRutxcHNOuJandPVEqPVr5oyuekSRvi8jU44D5ZNPOOgrJ5D6laU3l1ZaBW5PNtJNSIGikMMwlV12uRfcEYdDaq9RUOTY7fF8K1KJhpZtzM4iDMHvjFi2ZiGL1vhqFammK7BdzFJ_cQg</defaultedClientSecret>
     <namespace>custom-jenkins-image</namespace>
-    <provider>
-      <issuer>https://192.168.64.4:8443</issuer>
-      <authorization__endpoint>https://192.168.64.4:8443/oauth/authorize</authorization__endpoint>
-      <token__endpoint>https://192.168.64.4:8443/oauth/token</token__endpoint>
-    </provider>
     <filter/>
   </securityRealm>
   <disableRememberMe>false</disableRememberMe>
