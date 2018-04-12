@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<org.csanchez.jenkins.plugins.kubernetes.KubernetesSlave plugin="kubernetes@1.2">
+  <name>nodejs-5p8xd</name>
+  <description>nodejs</description>
+  <remoteFS>/tmp</remoteFS>
+  <numExecutors>1</numExecutors>
+  <mode>NORMAL</mode>
+  <retentionStrategy class="org.jenkinsci.plugins.durabletask.executors.OnceRetentionStrategy" plugin="durable-task@1.16">
+    <idleMinutes>5</idleMinutes>
+    <idleMinutes defined-in="org.jenkinsci.plugins.durabletask.executors.OnceRetentionStrategy">5</idleMinutes>
+  </retentionStrategy>
+  <launcher class="org.csanchez.jenkins.plugins.kubernetes.KubernetesLauncher">
+    <workDirSettings>
+      <disabled>true</disabled>
+      <internalDir>remoting</internalDir>
+      <failIfWorkDirIsMissing>false</failIfWorkDirIsMissing>
+    </workDirSettings>
+    <launched>false</launched>
+  </launcher>
+  <label>nodejs</label>
+  <nodeProperties/>
+  <userId>anonymous</userId>
+  <cloudName>openshift</cloudName>
+  <template>
+    <inheritFrom></inheritFrom>
+    <name>nodejs</name>
+    <privileged>false</privileged>
+    <alwaysPullImage>false</alwaysPullImage>
+    <instanceCap>2147483647</instanceCap>
+    <slaveConnectTimeout>0</slaveConnectTimeout>
+    <idleMinutes>0</idleMinutes>
+    <activeDeadlineSeconds>0</activeDeadlineSeconds>
+    <label>nodejs</label>
+    <serviceAccount>jenkins</serviceAccount>
+    <nodeSelector></nodeSelector>
+    <customWorkspaceVolumeEnabled>false</customWorkspaceVolumeEnabled>
+    <volumes/>
+    <containers>
+      <org.csanchez.jenkins.plugins.kubernetes.ContainerTemplate>
+        <name>jnlp</name>
+        <image>docker.io/openshift/jenkins-agent-nodejs-8-centos7:v3.10</image>
+        <privileged>false</privileged>
+        <alwaysPullImage>true</alwaysPullImage>
+        <workingDir>/tmp</workingDir>
+        <command></command>
+        <args>${computer.jnlpmac} ${computer.name}</args>
+        <ttyEnabled>false</ttyEnabled>
+        <resourceRequestCpu></resourceRequestCpu>
+        <resourceRequestMemory></resourceRequestMemory>
+        <resourceLimitCpu></resourceLimitCpu>
+        <resourceLimitMemory></resourceLimitMemory>
+        <envVars/>
+      </org.csanchez.jenkins.plugins.kubernetes.ContainerTemplate>
+    </containers>
+    <envVars/>
+    <annotations/>
+    <imagePullSecrets/>
+  </template>
+</org.csanchez.jenkins.plugins.kubernetes.KubernetesSlave>
