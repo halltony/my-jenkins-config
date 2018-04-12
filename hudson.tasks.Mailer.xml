@@ -1,11 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <hudson.tasks.Mailer_-DescriptorImpl plugin="mailer@1.20">
-  <defaultSuffix>@tonyjenkins.com</defaultSuffix>
-  <smtpAuthUsername>a.j.hall@blueyonder.co.uk</smtpAuthUsername>
-  <smtpAuthPassword>{AQAAABAAAAAQFg4AFR2gC5bSWD5NHs9TFfcEamershCaXVxfzTrBhxU=}</smtpAuthPassword>
-  <replyToAddress>a.j.hall@blueyonder.co.uk</replyToAddress>
-  <smtpHost>smtp.virginmedia.com</smtpHost>
-  <useSsl>true</useSsl>
-  <smtpPort>465</smtpPort>
+  <useSsl>false</useSsl>
   <charset>UTF-8</charset>
 </hudson.tasks.Mailer_-DescriptorImpl>

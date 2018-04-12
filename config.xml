@@ -482,20 +482,26 @@ S1JPewIDAQAB</encoded>
   <clouds>
     <org.csanchez.jenkins.plugins.kubernetes.KubernetesCloud plugin="kubernetes@1.2">
       <name>openshift</name>
+      <defaultsProviderTemplate></defaultsProviderTemplate>
       <templates>
         <org.csanchez.jenkins.plugins.kubernetes.PodTemplate>
           <inheritFrom></inheritFrom>
           <name>maven</name>
+          <namespace></namespace>
           <privileged>false</privileged>
           <alwaysPullImage>false</alwaysPullImage>
           <instanceCap>2147483647</instanceCap>
-          <slaveConnectTimeout>0</slaveConnectTimeout>
+          <slaveConnectTimeout>100</slaveConnectTimeout>
           <idleMinutes>0</idleMinutes>
           <activeDeadlineSeconds>0</activeDeadlineSeconds>
           <label>maven</label>
           <serviceAccount>jenkins</serviceAccount>
           <nodeSelector></nodeSelector>
+          <nodeUsageMode>NORMAL</nodeUsageMode>
           <customWorkspaceVolumeEnabled>false</customWorkspaceVolumeEnabled>
+          <workspaceVolume class="org.csanchez.jenkins.plugins.kubernetes.volumes.workspace.EmptyDirWorkspaceVolume">
+            <memory>false</memory>
+          </workspaceVolume>
           <volumes/>
           <containers>
             <org.csanchez.jenkins.plugins.kubernetes.ContainerTemplate>
@@ -512,6 +518,15 @@ S1JPewIDAQAB</encoded>
               <resourceLimitCpu></resourceLimitCpu>
               <resourceLimitMemory></resourceLimitMemory>
               <envVars/>
+              <ports/>
+              <livenessProbe>
+                <execArgs></execArgs>
+                <timeoutSeconds>0</timeoutSeconds>
+                <initialDelaySeconds>0</initialDelaySeconds>
+                <failureThreshold>0</failureThreshold>
+                <periodSeconds>0</periodSeconds>
+                <successThreshold>0</successThreshold>
+              </livenessProbe>
             </org.csanchez.jenkins.plugins.kubernetes.ContainerTemplate>
           </containers>
           <envVars/>
@@ -521,16 +536,21 @@ S1JPewIDAQAB</encoded>
         <org.csanchez.jenkins.plugins.kubernetes.PodTemplate>
           <inheritFrom></inheritFrom>
           <name>nodejs</name>
+          <namespace></namespace>
           <privileged>false</privileged>
           <alwaysPullImage>false</alwaysPullImage>
           <instanceCap>2147483647</instanceCap>
-          <slaveConnectTimeout>0</slaveConnectTimeout>
+          <slaveConnectTimeout>100</slaveConnectTimeout>
           <idleMinutes>0</idleMinutes>
           <activeDeadlineSeconds>0</activeDeadlineSeconds>
           <label>nodejs</label>
           <serviceAccount>jenkins</serviceAccount>
           <nodeSelector></nodeSelector>
+          <nodeUsageMode>NORMAL</nodeUsageMode>
           <customWorkspaceVolumeEnabled>false</customWorkspaceVolumeEnabled>
+          <workspaceVolume class="org.csanchez.jenkins.plugins.kubernetes.volumes.workspace.EmptyDirWorkspaceVolume">
+            <memory>false</memory>
+          </workspaceVolume>
           <volumes/>
           <containers>
             <org.csanchez.jenkins.plugins.kubernetes.ContainerTemplate>
@@ -547,6 +567,15 @@ S1JPewIDAQAB</encoded>
               <resourceLimitCpu></resourceLimitCpu>
               <resourceLimitMemory></resourceLimitMemory>
               <envVars/>
+              <ports/>
+              <livenessProbe>
+                <execArgs></execArgs>
+                <timeoutSeconds>0</timeoutSeconds>
+                <initialDelaySeconds>0</initialDelaySeconds>
+                <failureThreshold>0</failureThreshold>
+                <periodSeconds>0</periodSeconds>
+                <successThreshold>0</successThreshold>
+              </livenessProbe>
             </org.csanchez.jenkins.plugins.kubernetes.ContainerTemplate>
           </containers>
           <envVars/>
@@ -577,17 +606,10 @@ ACnjrHuTGLenheLASgz+1yT95WOFgf1/wFIa8lD0
       <namespace>custom-jenkins-image</namespace>
       <jenkinsUrl>http://172.30.176.240:80</jenkinsUrl>
       <jenkinsTunnel>172.30.23.3:50000</jenkinsTunnel>
-      <credentialsId>1a12dfa4-7fc5-47a7-aa17-cc56572a41c7</credentialsId>
       <containerCap>10</containerCap>
       <retentionTimeout>5</retentionTimeout>
       <connectTimeout>0</connectTimeout>
       <readTimeout>0</readTimeout>
-      <labels class="com.google.common.collect.ImmutableMap">
-        <entry>
-          <string>jenkins</string>
-          <string>slave</string>
-        </entry>
-      </labels>
       <maxRequestsPerHost>32</maxRequestsPerHost>
     </org.csanchez.jenkins.plugins.kubernetes.KubernetesCloud>
   </clouds>
